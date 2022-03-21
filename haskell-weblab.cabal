@@ -28,6 +28,7 @@ library
       Lib
       Week1a
       Week1b
+      Week2a
   other-modules:
       Paths_haskell_weblab
   hs-source-dirs:
