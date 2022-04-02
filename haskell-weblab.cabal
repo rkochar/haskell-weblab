@@ -25,7 +25,10 @@ source-repository head
 
 library
   exposed-modules:
+      Dirty
       Lib
+      Reader
+      Trie
       Week1a
       Week1b
       Week2a
@@ -35,6 +38,7 @@ library
       Week4a
       Week4b
       Week5
+      Writer
   other-modules:
       Paths_haskell_weblab
   hs-source-dirs:

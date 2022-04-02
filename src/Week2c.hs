@@ -89,13 +89,6 @@ prop_insertSorted0 x = forAll genSortedList (\xs -> elemSorted x (insertSorted x
 prop_deleteSorted :: Int -> Int -> Property
 prop_deleteSorted x y = x /= y ==> forAll genSortedList (\xs -> elemSorted x (deleteSortedBroken y (insertSorted x xs)))
 
-elemSorted :: Ord a => a -> [a] -> Bool
-elemSorted x [] = False
-elemSorted x (y:ys)
-  | x <  y    = False
-  | x == y    = True
-  | otherwise = elemSorted x ys
-
 insertSorted :: Ord a => a -> [a] -> [a]
 insertSorted x [] = [x]
 insertSorted x (y:ys)
